@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 import "./index.css";
@@ -7,10 +7,42 @@ export default function App() {
   const [todos, setTodos] = useState([]);
   const [editId, setEditId] = useState(null);
   const [editValue, setEditValue] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
-  const addTodo = (text) => setTodos([...todos, text]);
+  // Load todos from localStorage when app starts
+  useEffect(() => {
+    try {
+      const savedTodos = localStorage.getItem("todolist");
+      if (savedTodos) {
+        console.log("Loaded todos:", savedTodos);
+        setTodos(JSON.parse(savedTodos));
+      }
+    } catch (error) {
+      console.error("Error loading todos:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
 
-  const deleteTodo = (idx) => setTodos(todos.filter((_, i) => i !== idx));
+  // Save todos to localStorage whenever they change
+  useEffect(() => {
+    if (!isLoading) {
+      try {
+        localStorage.setItem("todolist", JSON.stringify(todos));
+        console.log("Saved todos:", todos);
+      } catch (error) {
+        console.error("Error saving todos:", error);
+      }
+    }
+  }, [todos, isLoading]);
+
+  const addTodo = (text) => {
+    setTodos([...todos, text]);
+  };
+
+  const deleteTodo = (idx) => {
+    setTodos(todos.filter((_, i) => i !== idx));
+  };
 
   const startEdit = (idx, text) => {
     setEditId(idx);
@@ -30,6 +62,14 @@ export default function App() {
     setEditId(null);
     setEditValue("");
   };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+        <p className="text-gray-600">Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
