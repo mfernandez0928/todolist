@@ -1,3 +1,5 @@
+import { FiEdit2, FiTrash2, FiCheck, FiX } from "react-icons/fi";
+
 export default function TodoList({
   todos,
   deleteTodo,
@@ -32,15 +34,17 @@ export default function TodoList({
                   />
                   <button
                     onClick={() => saveEdit(idx)}
-                    className="px-3 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition"
+                    className="p-2 text-green-500 hover:bg-green-100 rounded transition"
+                    title="Save"
                   >
-                    Save
+                    <FiCheck size={20} />
                   </button>
                   <button
                     onClick={cancelEdit}
-                    className="px-3 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 transition"
+                    className="p-2 text-gray-500 hover:bg-gray-200 rounded transition"
+                    title="Cancel"
                   >
-                    Cancel
+                    <FiX size={20} />
                   </button>
                 </div>
               ) : (
@@ -49,15 +53,17 @@ export default function TodoList({
                   <div className="flex gap-2">
                     <button
                       onClick={() => startEdit(idx, todo)}
-                      className="px-3 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition"
+                      className="p-2 text-yellow-500 hover:bg-yellow-100 rounded transition"
+                      title="Edit"
                     >
-                      Edit
+                      <FiEdit2 size={20} />
                     </button>
                     <button
                       onClick={() => deleteTodo(idx)}
-                      className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition"
+                      className="p-2 text-red-500 hover:bg-red-100 rounded transition"
+                      title="Delete"
                     >
-                      Delete
+                      <FiTrash2 size={20} />
                     </button>
                   </div>
                 </>
