@@ -7,48 +7,32 @@ Features
 ✅ Task Management
 
 Create, read, update, and delete tasks
-
 Mark tasks as complete or incomplete
-
 Track task completion status
 
 📝 Simple & Intuitive Interface
-
 Clean, minimalist design for focused productivity
-
 Easy-to-use task input and management
-
 Visual feedback for completed tasks
 
 ⚡ Fast & Responsive
-
 Lightning-fast performance with Vite
-
 Smooth user experience with Hot Module Replacement (HMR)
-
 Responsive design that works on all devices
 
 💾 Persistent Storage
-
 Tasks persist across browser sessions
-
 Local storage integration for data persistence
 
 🎨 Modern UI
-
 Clean and minimalist design
-
 Smooth transitions and interactions
-
 User-friendly interface
 
 Tech Stack
 Frontend Framework: React
-
 Build Tool: Vite
-
 Styling: CSS
-
 Deployment: Vercel
 
 Version Control: Git & GitHub
@@ -84,25 +68,11 @@ Preview Production Build
 bash
 npm run preview
 Project Structure
-text
-todolist/
-├── src/
-│   ├── components/       # React components
-│   ├── App.jsx          # Main App component
-│   ├── App.css          # App styles
-│   ├── main.jsx         # Entry point
-│   └── index.css        # Global styles
-├── public/              # Static assets
-├── index.html           # HTML template
-├── vite.config.js       # Vite configuration
-└── package.json         # Project dependencies
+
 How to Use
 Add Task: Type your task in the input field and press Enter or click the Add button
-
 Mark Complete: Click on a task to mark it as completed
-
 Delete Task: Click the delete button to remove a task
-
 View Tasks: All your tasks are displayed in a clean list format
 
 Key Features Explained
@@ -120,13 +90,9 @@ Works seamlessly on desktop, tablet, and mobile devices for productivity on the 
 
 Development Highlights
 Vite Performance: Extremely fast development experience with instant HMR
-
 React Best Practices: Functional components and hooks for clean, maintainable code
-
 Component-Based Architecture: Modular and reusable components
-
 CSS Styling: Custom CSS for unique visual design
-
 Simple State Management: Efficient state handling with React hooks
 
 Technologies Explained
@@ -138,37 +104,25 @@ A modern build tool that provides lightning-fast development experience and opti
 
 Future Enhancements
 Task categories and filtering
-
 Due dates and reminders
-
 Task prioritization (High, Medium, Low)
-
 Search and filter functionality
-
 Dark mode support
-
 Local storage persistence improvements
-
 Export tasks to different formats
-
 Recurring tasks
-
 Task notes and descriptions
 
 Performance Optimizations
 Optimized bundle size with Vite
-
 Fast refresh during development
 
 Minimal dependencies for faster load times
 
 Browser Support
 Chrome (latest)
-
 Firefox (latest)
-
 Safari (latest)
-
 Edge (latest)
 
 Troubleshooting
@@ -191,9 +145,7 @@ Contributions are welcome! Feel free to submit a Pull Request with improvements.
 Fork the repository
 
 Create your feature branch (git checkout -b feature/AmazingFeature)
-
 Commit your changes (git commit -m 'Add some AmazingFeature')
-
 Push to the branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
@@ -202,15 +154,14 @@ License
 This project is open source and available under the MIT License.
 
 Author
-Mark Fernandez
+Mark Ronaldo Fernandez II
 
 GitHub: @mfernandez0928
 
-Portfolio: [Your Portfolio Link]
+Portfolio: [https://markdev-portfolio.vercel.app/]
 
 Support
 If you find this project helpful, please consider giving it a ⭐ on GitHub!
-
 For issues, questions, or suggestions, please open an issue on the GitHub repository.
 
 Demo
